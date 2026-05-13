@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio </title>
+    <meta name="description" content="Stunning modern portfolio built with Python and premium design aesthetics.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">MANMINDER SINGH</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; border-radius: 50px;">Contact Me</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <span class="hero-subtitle">A Student Of Masters In Computer Science(M.C.A)</span>
+                    <h1 class="gradient-text">I'm Manminder Singh <br>Aspiring Software Developer</h1>
+                    <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px;">
+                        I build high-performance web applications and automated systems using html,css,python,javascript, Node.js,React.js, MongoDB, 
+                        blending technical excellence with stunning visual design.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="glass" style="padding: 1rem; border-radius: 50%; width: 400px; height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent), var(--accent-secondary)); opacity: 0.2;"></div>
+                        <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Manminder Singh" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid var(--border-color);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container">
+            <div class="grid grid-cols-3" style="gap: 4rem; align-items: center;">
+                <div class="glass" style="padding: 1rem; border-radius: 30px; position: relative;" data-aos="fade-right">
+                    <div style="aspect-ratio: 1; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Manminder Singh" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div style="position: absolute; bottom: -20px; right: -20px; padding: 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 20px;" class="glass">
+                        <h4 style="color: var(--accent);">3+ Projects</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Crafted with Excellence</p>
+                    </div>
+                </div>
+                <div style="grid-column: span 2;" data-aos="fade-left">
+                    <span class="hero-subtitle">My Story</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">A Full-Stack Developer with a Vision for <span class="gradient-text">Premium UX</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
+                        I am a dedicated developer who thrives at the intersection of technical complexity and visual elegance. 
+                        My journey in software engineering has led me to build sophisticated systems like **Smart Attendance platforms** 
+                        using face identification and **High-end E-commerce SPAs** that prioritize seamless user experiences.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem;">
+                        Whether it's architecting a robust MERN stack backend or crafting pixel-perfect interfaces with Tailwind CSS and React 19, 
+                        my goal is always to deliver solutions that are not just functional, but truly "wow" the user.
+                    </p>
+                    <div style="display: flex; gap: 2rem;">
+                        <div>
+                            <h3 style="font-size: 2rem; color: var(--accent);">Solution</h3>
+                            <p style="color: var(--text-muted);">Oriented Architect</p>
+                        </div>
+                        <div style="width: 1px; background: var(--border-color);"></div>
+                        <div>
+                            <h3 style="font-size: 2rem; color: var(--accent-secondary);">Modern</h3>
+                            <p style="color: var(--text-muted);">Stack Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
+                <span class="hero-subtitle">Academic Journey</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Education</h2>
+                <p style="color: var(--text-muted);">A foundation of knowledge and technical excellence.</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto; position: relative;">
+                <!-- Timeline Line -->
+                <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--accent-secondary)); opacity: 0.3;"></div>
+
+                <!-- MCA -->
+                <div style="margin-bottom: 3rem; padding-left: 60px; position: relative;" data-aos="fade-left">
+                    <div style="position: absolute; left: 10px; top: 0; width: 20px; height: 20px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 15px var(--accent);"></div>
+                    <div class="glass" style="padding: 2rem; border-radius: 20px;">
+                        <span style="color: var(--accent); font-weight: 600; font-size: 0.9rem;">2024 - 2026</span>
+                        <h3 style="margin: 0.5rem 0;">Master of Computer Applications (MCA)</h3>
+                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.5rem;">Computational Science</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Maharaja Ranjit Singh Punjab Technical University</p>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div style="margin-bottom: 3rem; padding-left: 60px; position: relative;" data-aos="fade-left" data-aos-delay="100">
+                    <div style="position: absolute; left: 10px; top: 0; width: 20px; height: 20px; background: var(--accent-secondary); border-radius: 50%; box-shadow: 0 0 15px var(--accent-secondary);"></div>
+                    <div class="glass" style="padding: 2rem; border-radius: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span style="color: var(--accent-secondary); font-weight: 600; font-size: 0.9rem;">2020 - 2023</span>
+                                <h3 style="margin: 0.5rem 0;">Bachelor of Computer Applications (BCA)</h3>
+                                <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.5rem;">Computational Science</p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Maharaja Ranjit Singh Punjab Technical University</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 12px; border: 1px solid var(--border-color); color: var(--accent-secondary); font-weight: 700;">73.00%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XII -->
+                <div style="margin-bottom: 3rem; padding-left: 60px; position: relative;" data-aos="fade-left" data-aos-delay="200">
+                    <div style="position: absolute; left: 10px; top: 0; width: 20px; height: 20px; background: var(--accent); border-radius: 50%; opacity: 0.8;"></div>
+                    <div class="glass" style="padding: 2rem; border-radius: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span style="color: var(--text-muted); font-weight: 600; font-size: 0.9rem;">Completed 2020</span>
+                                <h3 style="margin: 0.5rem 0;">Senior Secondary (XII), Arts</h3>
+                                <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.5rem;">Kendriya Vidyalaya, Bathinda</p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">NIOS Board</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 12px; border: 1px solid var(--border-color); color: var(--text-main); font-weight: 700;">70.00%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- X -->
+                <div style="padding-left: 60px; position: relative;" data-aos="fade-left" data-aos-delay="300">
+                    <div style="position: absolute; left: 10px; top: 0; width: 20px; height: 20px; background: var(--accent-secondary); border-radius: 50%; opacity: 0.8;"></div>
+                    <div class="glass" style="padding: 2rem; border-radius: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span style="color: var(--text-muted); font-weight: 600; font-size: 0.9rem;">Completed 2018</span>
+                                <h3 style="margin: 0.5rem 0;">Secondary (X)</h3>
+                                <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.5rem;">Kendriya Vidyalaya Ramgarh Cantt</p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">CBSE Board</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 12px; border: 1px solid var(--border-color); color: var(--text-main); font-weight: 700;">65.00%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div style="margin-bottom: 4rem; text-align: center;" data-aos="fade-up">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Featured Projects</h2>
+                    <p style="color: var(--text-muted);">A selection of my recent work in Python and Web Development.</p>
+                </div>
+                <div class="grid grid-cols-3">
+                    <!-- Project: Smart Attendance (New) -->
+                    <div class="glass card" data-aos="fade-up" data-aos-delay="100" style="grid-column: span 2;">
+                        <div class="card-icon"><i data-lucide="user-check"></i></div>
+                        <h3 style="font-size: 1.8rem;">Smart Attendance & University Management System</h3>
+                        <p style="margin-bottom: 1.5rem;">A comprehensive web application that automates the attendance workflow using visual verification and live camera integration. Features multi-role dashboards for Admins, Teachers, and Students.</p>
+                        <ul style="list-style: none; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            <li><i data-lucide="check-circle-2" style="width: 14px; height: 14px; margin-right: 8px; color: var(--accent-secondary);"></i>Multi-Role Dashboards</li>
+                            <li><i data-lucide="check-circle-2" style="width: 14px; height: 14px; margin-right: 8px; color: var(--accent-secondary);"></i>Smart Face-ID Sync</li>
+                            <li><i data-lucide="check-circle-2" style="width: 14px; height: 14px; margin-right: 8px; color: var(--accent-secondary);"></i>Advanced Analytics</li>
+                            <li><i data-lucide="check-circle-2" style="width: 14px; height: 14px; margin-right: 8px; color: var(--accent-secondary);"></i>Real-time Filtering</li>
+                        </ul>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--accent);">Node.js</span>
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">Express</span>
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">MongoDB</span>
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">React.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Project: Mobilehub -->
+                    <div class="glass card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon"><i data-lucide="smartphone"></i></div>
+                        <h3>Mobilehub: Apple E-Commerce</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">A sophisticated SPA built for showcasing and selling mobile devices with a focus on Apple products and premium UX.</p>
+                        <ul style="list-style: none; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <li><i data-lucide="arrow-right" style="width: 12px; height: 12px; margin-right: 6px; color: var(--accent);"></i>Dynamic Discovery</li>
+                            <li><i data-lucide="arrow-right" style="width: 12px; height: 12px; margin-right: 6px; color: var(--accent);"></i>Stateful Cart</li>
+                        </ul>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">React 19</span>
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <!-- Project: Tactical Minefield Calculator (New) -->
+                    <div class="glass card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon"><i data-lucide="shield-alert"></i></div>
+                        <h3>Minefield Calculator</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">A specialized military utility app designed to calculate required landmines and materials for secure field deployment.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">HTML/CSS</span>
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">JS Logic</span>
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">Military Tech</span>
+                        </div>
+                    </div>
+
+                    <!-- Project: PG Accommodation Portal (New) -->
+                    <div class="glass card" data-aos="fade-up" data-aos-delay="200" style="grid-column: span 2;">
+                        <div class="card-icon"><i data-lucide="home"></i></div>
+                        <h3 style="font-size: 1.5rem;">PG Accommodation Management Portal</h3>
+                        <p style="margin-bottom: 1rem;">A full-stack solution for managing Paying Guest stays, featuring a robust SQL backend for tracking reservations, room availability, and tenant details.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">SQL Backend</span>
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">JS/DOM</span>
+                            <span style="font-size: 0.8rem; background: var(--border-color); padding: 4px 12px; border-radius: 20px;">Database Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Project: AutoTrade (New) -->
+                    <div class="glass card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon"><i data-lucide="car"></i></div>
+                        <h3>AutoTrade: Car Dealer Platform</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">A high-performance car dealership website featuring dynamic inventory sorting and detailed vehicle showcases.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">Frontend Dev</span>
+                            <span style="font-size: 0.75rem; background: var(--border-color); padding: 2px 8px; border-radius: 4px;">Modern UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                  
+
+        <!-- Skills Section -->
+        <section id="skills" class="glass" style="border-radius: 0; border-left: 0; border-right: 0;">
+            <div class="container">
+                <div class="grid grid-cols-3" style="align-items: center;">
+                    <div data-aos="fade-right">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Expertise & <br>Tech Stack</h2>
+                        <p style="color: var(--text-muted);">Constantly evolving with the modern ecosystem to deliver the best solutions.</p>
+                    </div>
+                    <div style="grid-column: span 2;" data-aos="fade-left">
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                            <div class="glass" style="padding: 1.5rem 2rem; flex: 1 1 200px; text-align: center;">
+                                <i data-lucide="code-2" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                                <h4>Backend</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Flask, Django, FastAPI</p>
+                            </div>
+                            <div class="glass" style="padding: 1.5rem 2rem; flex: 1 1 200px; text-align: center;">
+                                <i data-lucide="monitor" style="color: var(--accent-secondary); margin-bottom: 1rem;"></i>
+                                <h4>Frontend</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">HTML5, CSS3, JS, React</p>
+                            </div>
+                            <div class="glass" style="padding: 1.5rem 2rem; flex: 1 1 200px; text-align: center;">
+                                <i data-lucide="database" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                                <h4>Data</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">PostgreSQL, Redis, Mongo</p>
+                            </div>
+                            <div class="glass" style="padding: 1.5rem 2rem; flex: 1 1 200px; text-align: center;">
+                                <i data-lucide="box" style="color: var(--accent-secondary); margin-bottom: 1rem;"></i>
+                                <h4>DevOps</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Docker, AWS, CI/CD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="glass" style="padding: 4rem; max-width: 900px; margin: 0 auto;" data-aos="zoom-in">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's Build Something</h2>
+                        <p style="color: var(--text-muted);">Have a project in mind? I'm currently available for freelance work.</p>
+                    </div>
+                    <form style="display: grid; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.9rem; color: var(--text-muted);">Your Name</label>
+                                <input type="text" class="glass" style="padding: 1rem; color: white; background: rgba(255,255,255,0.05);">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.9rem; color: var(--text-muted);">Email Address</label>
+                                <input type="email" class="glass" style="padding: 1rem; color: white; background: rgba(255,255,255,0.05);">
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label style="font-size: 0.9rem; color: var(--text-muted);">Message</label>
+                            <textarea class="glass" rows="5" style="padding: 1rem; color: white; background: rgba(255,255,255,0.05);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="border: none;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Manminder Singh. Crafted with Passion & Python.</p>
+            <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="#" style="color: var(--text-muted);"><i data-lucide="github"></i></a>
+                <a href="#" style="color: var(--text-muted);"><i data-lucide="twitter"></i></a>
+                <a href="#" style="color: var(--text-muted);"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Initialize Animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
